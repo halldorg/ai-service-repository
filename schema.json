@@ -1,0 +1,363 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/yourusername/ai-service-repository/schema/v1.0.0/schema.json",
+  "title": "AI & Developer Service Repository Schema",
+  "description": "Schema for AI services, developer tools, and SaaS databases",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Schema version in semver format"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "checksum": {
+      "type": "string",
+      "description": "SHA256 checksum of the services array"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/category"
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/service"
+      }
+    }
+  },
+  "required": ["version", "lastUpdated", "services", "categories"],
+  "definitions": {
+    "category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "emoji": {
+          "type": "string",
+          "maxLength": 2
+        },
+        "description": {
+          "type": "string"
+        },
+        "sortOrder": {
+          "type": "integer"
+        }
+      },
+      "required": ["id", "name"]
+    },
+    "service": {
+      "type": "object",
+      "properties": {
+        "serviceId": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Unique identifier for the service"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "URL-friendly name"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Entry version number"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the service"
+        },
+        "provider": {
+          "type": "string",
+          "description": "Company or organization providing the service"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "category": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "subcategories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tagline": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "One-line description"
+        },
+        "briefDescription": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "2-3 sentence overview"
+        },
+        "fullDescription": {
+          "type": "string",
+          "description": "Comprehensive description"
+        },
+        "keyFeatures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "required": ["title"]
+          }
+        },
+        "useCases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pricing": {
+          "$ref": "#/definitions/pricing"
+        },
+        "freeTrial": {
+          "type": "object",
+          "properties": {
+            "available": {
+              "type": "boolean"
+            },
+            "duration": {
+              "type": "string"
+            },
+            "creditCard": {
+              "type": "boolean",
+              "description": "Credit card required for trial"
+            }
+          }
+        },
+        "api": {
+          "type": "object",
+          "properties": {
+            "available": {
+              "type": "boolean"
+            },
+            "documentation": {
+              "type": "string",
+              "format": "uri"
+            },
+            "type": {
+              "type": "string",
+              "enum": ["REST", "GraphQL", "gRPC", "WebSocket", "Other"]
+            }
+          }
+        },
+        "sdks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Available SDKs/libraries"
+        },
+        "integrations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Third-party integrations"
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["web", "ios", "android", "macos", "windows", "linux", "api"]
+          }
+        },
+        "userBase": {
+          "type": "string",
+          "description": "e.g., '10M+ users' or 'Enterprise-focused'"
+        },
+        "typicalUser": {
+          "type": "string",
+          "description": "Primary user type"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Similar services"
+        },
+        "commonPairings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Services commonly used together"
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "logo": {
+              "type": "string",
+              "format": "uri"
+            },
+            "screenshots": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        },
+        "support": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "documentation": {
+              "type": "string",
+              "format": "uri"
+            },
+            "community": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "dateAdded": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "lastVerified": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "lastUpdated": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "verificationStatus": {
+              "type": "string",
+              "enum": ["verified", "unverified", "outdated", "community-verified"]
+            },
+            "dataSource": {
+              "type": "string",
+              "description": "Where this data was sourced from"
+            }
+          },
+          "required": ["dateAdded", "lastUpdated", "verificationStatus"]
+        }
+      },
+      "required": [
+        "serviceId",
+        "slug",
+        "version",
+        "name",
+        "provider",
+        "category",
+        "tagline",
+        "briefDescription",
+        "pricing",
+        "metadata"
+      ]
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "enum": ["free", "freemium", "subscription", "usage-based", "one-time", "custom"]
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/pricingTier"
+          }
+        },
+        "customPricing": {
+          "type": "boolean",
+          "description": "Contact for pricing"
+        }
+      },
+      "required": ["model", "tiers"]
+    },
+    "pricingTier": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "cost": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "billingCycle": {
+          "type": "string",
+          "enum": ["monthly", "annual", "one-time", "usage-based", null]
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limits": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string" },
+              { "type": "boolean" }
+            ]
+          }
+        },
+        "isFreeTier": {
+          "type": "boolean"
+        },
+        "requiresCreditCard": {
+          "type": "boolean"
+        }
+      },
+      "required": ["name", "cost"]
+    }
+  }
+}

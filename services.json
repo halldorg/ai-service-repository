@@ -1,0 +1,1673 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-06T00:00:00Z",
+  "checksum": "sha256:placeholder",
+  "categories": [
+    {
+      "id": "chat-llm",
+      "name": "Chat / LLM Assistants",
+      "emoji": "💬",
+      "description": "Conversational AI and language models",
+      "sortOrder": 1
+    },
+    {
+      "id": "writing-content",
+      "name": "Writing & Content",
+      "emoji": "✍️",
+      "description": "AI-powered writing and content creation tools",
+      "sortOrder": 2
+    },
+    {
+      "id": "code-dev",
+      "name": "Code & Dev Tools",
+      "emoji": "👨‍💻",
+      "description": "AI coding assistants and development tools",
+      "sortOrder": 3
+    },
+    {
+      "id": "image-gen",
+      "name": "Image Generation",
+      "emoji": "🎨",
+      "description": "AI image creation and editing tools",
+      "sortOrder": 4
+    },
+    {
+      "id": "video-gen",
+      "name": "Video Generation",
+      "emoji": "🎬",
+      "description": "AI video creation and editing tools",
+      "sortOrder": 5
+    },
+    {
+      "id": "audio-speech",
+      "name": "Audio & Speech",
+      "emoji": "🎵",
+      "description": "Voice synthesis, transcription, and audio tools",
+      "sortOrder": 6
+    },
+    {
+      "id": "data-hosting",
+      "name": "Data & Infrastructure",
+      "emoji": "🗄️",
+      "description": "Databases, hosting, and backend services",
+      "sortOrder": 7
+    },
+    {
+      "id": "automation",
+      "name": "Automation & Agents",
+      "emoji": "🤖",
+      "description": "AI agents and workflow automation",
+      "sortOrder": 8
+    },
+    {
+      "id": "api-marketplace",
+      "name": "APIs & Marketplaces",
+      "emoji": "🔌",
+      "description": "API services and model marketplaces",
+      "sortOrder": 9
+    }
+  ],
+  "services": [
+    {
+      "serviceId": "openai-chatgpt",
+      "slug": "chatgpt",
+      "version": 1,
+      "name": "ChatGPT",
+      "provider": "OpenAI",
+      "website": "https://chat.openai.com",
+      "category": "chat-llm",
+      "subcategories": ["writing", "coding", "analysis"],
+      "tagline": "Advanced AI assistant powered by GPT-4",
+      "briefDescription": "ChatGPT is OpenAI's conversational AI that can help with writing, analysis, coding, and creative tasks. Available with GPT-3.5 (free) and GPT-4 (paid) models.",
+      "fullDescription": "ChatGPT represents the cutting edge of conversational AI, offering natural language understanding and generation capabilities. It excels at tasks ranging from creative writing and code generation to complex problem-solving and data analysis. The platform includes web browsing, code interpretation, and DALL-E image generation in premium tiers.",
+      "keyFeatures": [
+        {
+          "title": "GPT-4 Access",
+          "description": "Latest model with advanced reasoning"
+        },
+        {
+          "title": "Code Interpreter",
+          "description": "Execute Python code and analyze data"
+        },
+        {
+          "title": "DALL-E Integration",
+          "description": "Generate images from text descriptions"
+        },
+        {
+          "title": "Custom GPTs",
+          "description": "Create specialized AI assistants"
+        }
+      ],
+      "useCases": ["Content creation", "Code debugging", "Research assistance", "Language translation", "Educational tutoring"],
+      "limitations": ["Knowledge cutoff date", "No real-time information without browsing", "Token limits per conversation"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["GPT-3.5 access", "Standard response speed", "Regular model updates"],
+            "limits": {
+              "messagesPerDay": 50,
+              "gpt4Access": false
+            },
+            "isFreeTier": true,
+            "requiresCreditCard": false
+          },
+          {
+            "name": "Plus",
+            "cost": 20,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["GPT-4 access", "Faster response times", "DALL-E image generation", "Advanced data analysis"],
+            "limits": {
+              "gpt4MessagesPerHour": 50,
+              "dalleImagesPerDay": 50
+            }
+          },
+          {
+            "name": "Team",
+            "cost": 30,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Everything in Plus", "Team workspace", "Admin controls", "Higher message limits"],
+            "limits": {
+              "gpt4MessagesPerHour": 100,
+              "teamMembers": "unlimited"
+            }
+          }
+        ]
+      },
+      "freeTrial": {
+        "available": true,
+        "duration": "Unlimited free tier",
+        "creditCard": false
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://platform.openai.com/docs",
+        "type": "REST"
+      },
+      "sdks": ["Python", "Node.js", "C#", "Java"],
+      "integrations": ["Zapier", "Make", "Slack", "Microsoft Teams"],
+      "platforms": ["web", "ios", "android", "api"],
+      "userBase": "100M+ users",
+      "typicalUser": "Knowledge workers, developers, students",
+      "alternatives": ["claude-ai", "google-gemini", "perplexity-ai"],
+      "commonPairings": ["github-copilot", "notion-ai"],
+      "support": {
+        "documentation": "https://help.openai.com",
+        "community": "https://community.openai.com"
+      },
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "anthropic-claude",
+      "slug": "claude",
+      "version": 1,
+      "name": "Claude",
+      "provider": "Anthropic",
+      "website": "https://claude.ai",
+      "category": "chat-llm",
+      "subcategories": ["writing", "coding", "analysis"],
+      "tagline": "AI assistant focused on being helpful, harmless, and honest",
+      "briefDescription": "Claude is Anthropic's AI assistant known for nuanced thinking, strong coding abilities, and careful reasoning. Available in multiple model sizes including the powerful Claude 3 Opus.",
+      "fullDescription": "Claude represents Anthropic's approach to safe and capable AI. It excels at complex reasoning tasks, long-form content creation, and technical analysis. Claude can process very long documents (up to 200K tokens), making it ideal for analyzing codebases, research papers, and extensive documentation.",
+      "keyFeatures": [
+        {
+          "title": "200K Context Window",
+          "description": "Process entire books or codebases"
+        },
+        {
+          "title": "Constitutional AI",
+          "description": "Built with safety and helpfulness in mind"
+        },
+        {
+          "title": "Strong Coding Skills",
+          "description": "Excellent at debugging and code generation"
+        },
+        {
+          "title": "Artifacts",
+          "description": "Create and iterate on documents and code"
+        }
+      ],
+      "useCases": ["Long document analysis", "Complex coding tasks", "Research synthesis", "Creative writing", "Technical documentation"],
+      "limitations": ["No internet access", "No image generation", "Knowledge cutoff"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["Claude 3 Sonnet access", "Limited daily messages"],
+            "limits": {
+              "messagesPerDay": 30
+            },
+            "isFreeTier": true,
+            "requiresCreditCard": false
+          },
+          {
+            "name": "Pro",
+            "cost": 20,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Claude 3 Opus access", "5x more usage", "Priority access", "Projects feature"],
+            "limits": {
+              "messagesPerDay": 300
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://docs.anthropic.com",
+        "type": "REST"
+      },
+      "sdks": ["Python", "TypeScript"],
+      "platforms": ["web", "api"],
+      "userBase": "Growing rapidly",
+      "typicalUser": "Researchers, developers, writers",
+      "alternatives": ["openai-chatgpt", "google-gemini"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "github-copilot",
+      "slug": "github-copilot",
+      "version": 1,
+      "name": "GitHub Copilot",
+      "provider": "GitHub/Microsoft",
+      "website": "https://github.com/features/copilot",
+      "category": "code-dev",
+      "subcategories": ["ide-integration", "code-completion"],
+      "tagline": "Your AI pair programmer",
+      "briefDescription": "GitHub Copilot uses AI to suggest code completions and entire functions in real-time, right in your editor. Powered by OpenAI Codex and trained on billions of lines of code.",
+      "fullDescription": "GitHub Copilot revolutionizes coding by providing intelligent code suggestions as you type. It understands context from comments and code, suggesting complete lines or entire functions. Copilot supports dozens of languages and integrates seamlessly with popular IDEs. The chat feature allows for code explanations, debugging help, and test generation.",
+      "keyFeatures": [
+        {
+          "title": "Real-time Suggestions",
+          "description": "Get code completions as you type"
+        },
+        {
+          "title": "Multi-language Support",
+          "description": "Works with all major programming languages"
+        },
+        {
+          "title": "Copilot Chat",
+          "description": "Ask questions about your code"
+        },
+        {
+          "title": "Test Generation",
+          "description": "Automatically create unit tests"
+        }
+      ],
+      "useCases": ["Code completion", "Learning new languages", "Boilerplate generation", "Bug fixing", "Documentation writing"],
+      "limitations": ["Requires internet connection", "May suggest outdated patterns", "Quality varies by language"],
+      "pricing": {
+        "model": "subscription",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Individual",
+            "cost": 10,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited code suggestions", "Copilot Chat", "CLI support"],
+            "limits": {}
+          },
+          {
+            "name": "Business",
+            "cost": 19,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Everything in Individual", "Organization management", "Policy controls"],
+            "limits": {}
+          }
+        ]
+      },
+      "freeTrial": {
+        "available": true,
+        "duration": "30 days",
+        "creditCard": true
+      },
+      "sdks": [],
+      "integrations": ["VS Code", "Visual Studio", "JetBrains IDEs", "Neovim"],
+      "platforms": ["macos", "windows", "linux"],
+      "userBase": "1M+ developers",
+      "typicalUser": "Professional developers",
+      "alternatives": ["cursor-ai", "codeium", "tabnine"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "midjourney",
+      "slug": "midjourney",
+      "version": 1,
+      "name": "Midjourney",
+      "provider": "Midjourney Inc.",
+      "website": "https://www.midjourney.com",
+      "category": "image-gen",
+      "subcategories": ["art", "design"],
+      "tagline": "AI-powered image generation for artists and designers",
+      "briefDescription": "Midjourney creates stunning, artistic images from text descriptions. Known for its distinctive aesthetic style and high-quality outputs, it's popular among artists and designers.",
+      "fullDescription": "Midjourney has become synonymous with high-quality AI art generation. It excels at creating artistic, stylized images with a unique aesthetic. The platform operates through Discord, offering various controls for style, composition, and variation. Version 6 brings photorealistic capabilities while maintaining artistic excellence.",
+      "keyFeatures": [
+        {
+          "title": "Artistic Style",
+          "description": "Distinctive aesthetic quality"
+        },
+        {
+          "title": "Variation Controls",
+          "description": "Fine-tune and iterate on images"
+        },
+        {
+          "title": "Upscaling",
+          "description": "Enhance resolution of generated images"
+        },
+        {
+          "title": "Style References",
+          "description": "Use images to guide style"
+        }
+      ],
+      "useCases": ["Concept art", "Marketing visuals", "Book illustrations", "Product design", "Creative exploration"],
+      "limitations": ["Discord-only interface", "No API access", "Queue times during peak hours"],
+      "pricing": {
+        "model": "subscription",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Basic",
+            "cost": 10,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["200 image generations/month", "3 concurrent jobs"],
+            "limits": {
+              "monthlyGenerations": 200,
+              "concurrentJobs": 3
+            }
+          },
+          {
+            "name": "Standard",
+            "cost": 30,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited generations", "15 hours fast GPU time", "3 concurrent jobs"],
+            "limits": {
+              "fastGPUHours": 15,
+              "concurrentJobs": 3
+            }
+          },
+          {
+            "name": "Pro",
+            "cost": 60,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited generations", "30 hours fast GPU time", "12 concurrent jobs", "Stealth mode"],
+            "limits": {
+              "fastGPUHours": 30,
+              "concurrentJobs": 12
+            }
+          }
+        ]
+      },
+      "platforms": ["web"],
+      "userBase": "16M+ users",
+      "typicalUser": "Artists, designers, content creators",
+      "alternatives": ["stable-diffusion", "dall-e", "leonardo-ai"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "perplexity-ai",
+      "slug": "perplexity",
+      "version": 1,
+      "name": "Perplexity AI",
+      "provider": "Perplexity AI",
+      "website": "https://www.perplexity.ai",
+      "category": "chat-llm",
+      "subcategories": ["search", "research"],
+      "tagline": "AI-powered search engine with real-time information",
+      "briefDescription": "Perplexity combines large language models with real-time web search to provide accurate, up-to-date answers with citations. It's designed for research and fact-finding.",
+      "fullDescription": "Perplexity AI reimagines search by combining the conversational abilities of LLMs with real-time web access. Every answer includes citations to sources, making it ideal for research, fact-checking, and staying current. The Pro version offers access to GPT-4, Claude, and other premium models with enhanced search capabilities.",
+      "keyFeatures": [
+        {
+          "title": "Real-time Web Search",
+          "description": "Always current information"
+        },
+        {
+          "title": "Source Citations",
+          "description": "Every claim is backed by sources"
+        },
+        {
+          "title": "Multiple AI Models",
+          "description": "Choose between different LLMs"
+        },
+        {
+          "title": "Focus Modes",
+          "description": "Search specific domains like academic papers"
+        }
+      ],
+      "useCases": ["Research", "Fact-checking", "Current events", "Technical documentation", "Academic research"],
+      "limitations": ["Less creative than pure LLMs", "Dependent on search quality"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["Standard search", "Quick answers", "5 Pro searches/day"],
+            "limits": {
+              "proSearchesPerDay": 5
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Pro",
+            "cost": 20,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited Pro searches", "GPT-4 and Claude access", "File uploads", "API access"],
+            "limits": {
+              "fileUploads": "unlimited"
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://docs.perplexity.ai",
+        "type": "REST"
+      },
+      "platforms": ["web", "ios", "android"],
+      "userBase": "10M+ monthly users",
+      "typicalUser": "Researchers, students, professionals",
+      "alternatives": ["you-com", "phind", "bing-chat"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "eleven-labs",
+      "slug": "elevenlabs",
+      "version": 1,
+      "name": "ElevenLabs",
+      "provider": "ElevenLabs",
+      "website": "https://elevenlabs.io",
+      "category": "audio-speech",
+      "subcategories": ["voice-synthesis", "text-to-speech"],
+      "tagline": "The most realistic AI voice generator",
+      "briefDescription": "ElevenLabs offers cutting-edge AI voice synthesis technology that creates incredibly realistic speech. Clone voices, generate speech in multiple languages, and create audio content at scale.",
+      "fullDescription": "ElevenLabs has set the standard for AI voice generation with their proprietary models that produce remarkably human-like speech. The platform supports voice cloning from just minutes of audio, multilingual synthesis, and emotional control. It's widely used for audiobooks, video narration, podcasts, and accessibility applications.",
+      "keyFeatures": [
+        {
+          "title": "Voice Cloning",
+          "description": "Create custom voices from audio samples"
+        },
+        {
+          "title": "Multilingual Support",
+          "description": "Generate speech in 29+ languages"
+        },
+        {
+          "title": "Emotion Control",
+          "description": "Adjust tone and emotion"
+        },
+        {
+          "title": "Projects",
+          "description": "Long-form audio content creation"
+        }
+      ],
+      "useCases": ["Audiobook narration", "Video voiceovers", "Podcast creation", "Game dialogue", "Accessibility tools"],
+      "limitations": ["Ethical considerations for voice cloning", "Compute-intensive for long content"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["10,000 characters/month", "3 custom voices"],
+            "limits": {
+              "charactersPerMonth": 10000,
+              "customVoices": 3
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Starter",
+            "cost": 5,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["30,000 characters/month", "10 custom voices", "Commercial use"],
+            "limits": {
+              "charactersPerMonth": 30000,
+              "customVoices": 10
+            }
+          },
+          {
+            "name": "Creator",
+            "cost": 22,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["100,000 characters/month", "30 custom voices", "Professional features"],
+            "limits": {
+              "charactersPerMonth": 100000,
+              "customVoices": 30
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://docs.elevenlabs.io",
+        "type": "REST"
+      },
+      "sdks": ["Python", "Node.js", "Java"],
+      "platforms": ["web", "api"],
+      "userBase": "1M+ users",
+      "typicalUser": "Content creators, developers, publishers",
+      "alternatives": ["play-ht", "murf-ai", "resemble-ai"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "supabase",
+      "slug": "supabase",
+      "version": 1,
+      "name": "Supabase",
+      "provider": "Supabase Inc.",
+      "website": "https://supabase.com",
+      "category": "data-hosting",
+      "subcategories": ["database", "backend", "auth"],
+      "tagline": "The open source Firebase alternative",
+      "briefDescription": "Supabase provides a complete backend platform with PostgreSQL database, authentication, real-time subscriptions, and storage. Build production-ready apps with a generous free tier.",
+      "fullDescription": "Supabase offers developers a comprehensive backend-as-a-service platform built on open source technologies. At its core is a PostgreSQL database with real-time capabilities, combined with authentication, storage, and edge functions. The platform provides instant APIs, row-level security, and a user-friendly dashboard, making it ideal for rapid application development.",
+      "keyFeatures": [
+        {
+          "title": "PostgreSQL Database",
+          "description": "Full PostgreSQL with extensions"
+        },
+        {
+          "title": "Real-time Subscriptions",
+          "description": "Listen to database changes"
+        },
+        {
+          "title": "Authentication",
+          "description": "Built-in auth with providers"
+        },
+        {
+          "title": "Storage",
+          "description": "S3-compatible object storage"
+        },
+        {
+          "title": "Edge Functions",
+          "description": "Deploy serverless functions"
+        },
+        {
+          "title": "Vector Embeddings",
+          "description": "Built-in support for AI applications"
+        }
+      ],
+      "useCases": ["Web applications", "Mobile backends", "SaaS products", "Real-time apps", "AI/ML applications"],
+      "limitations": ["Self-hosting complexity", "PostgreSQL learning curve"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["500MB database", "5GB storage", "50MB file uploads", "Social auth providers"],
+            "limits": {
+              "database": "500MB",
+              "storage": "5GB",
+              "bandwidth": "5GB",
+              "mau": 50000
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Pro",
+            "cost": 25,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["8GB database", "100GB storage", "5GB file uploads", "No pause after 1 week"],
+            "limits": {
+              "database": "8GB",
+              "storage": "100GB",
+              "bandwidth": "200GB"
+            }
+          },
+          {
+            "name": "Team",
+            "cost": 599,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited database", "1TB storage", "SOC2 compliance", "Priority support"],
+            "limits": {
+              "customLimits": true
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://supabase.com/docs",
+        "type": "REST"
+      },
+      "sdks": ["JavaScript", "Python", "Dart", "Swift", "Kotlin"],
+      "integrations": ["Vercel", "Netlify", "Prisma", "Auth0"],
+      "platforms": ["web", "api"],
+      "userBase": "300K+ developers",
+      "typicalUser": "Full-stack developers, startups",
+      "alternatives": ["firebase", "appwrite", "pocketbase"],
+      "commonPairings": ["vercel", "nextjs"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "cursor-ai",
+      "slug": "cursor",
+      "version": 1,
+      "name": "Cursor",
+      "provider": "Cursor AI",
+      "website": "https://cursor.sh",
+      "category": "code-dev",
+      "subcategories": ["ide", "code-completion"],
+      "tagline": "The AI-first code editor",
+      "briefDescription": "Cursor is a fork of VS Code rebuilt from the ground up for AI-assisted programming. It offers advanced code completion, chat, and the ability to edit multiple files with AI commands.",
+      "fullDescription": "Cursor represents a new paradigm in code editors by deeply integrating AI throughout the development experience. Built on VS Code's foundation, it adds powerful features like multi-file editing with AI, codebase-aware chat, and predictive editing. The editor understands your entire project context and can make complex changes across files.",
+      "keyFeatures": [
+        {
+          "title": "Codebase Context",
+          "description": "AI understands your entire project"
+        },
+        {
+          "title": "Multi-file Editing",
+          "description": "Change multiple files with one command"
+        },
+        {
+          "title": "Predictive Editing",
+          "description": "AI predicts your next edits"
+        },
+        {
+          "title": "Natural Language Commands",
+          "description": "Edit code using plain English"
+        }
+      ],
+      "useCases": ["Rapid prototyping", "Code refactoring", "Learning new codebases", "Debugging", "Code migration"],
+      "limitations": ["Requires internet connection", "Learning curve for AI features"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Hobby",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["2000 completions/month", "50 slow premium requests"],
+            "limits": {
+              "completionsPerMonth": 2000,
+              "premiumRequests": 50
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Pro",
+            "cost": 20,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited completions", "500 fast premium requests/month", "Claude Opus & GPT-4"],
+            "limits": {
+              "fastRequests": 500
+            }
+          },
+          {
+            "name": "Business",
+            "cost": 40,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Everything in Pro", "Centralized billing", "Admin dashboard", "Privacy mode"],
+            "limits": {
+              "fastRequests": 500
+            }
+          }
+        ]
+      },
+      "platforms": ["macos", "windows", "linux"],
+      "userBase": "Growing rapidly",
+      "typicalUser": "Professional developers",
+      "alternatives": ["github-copilot", "codeium", "windsurf"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "runwayml",
+      "slug": "runway",
+      "version": 1,
+      "name": "Runway",
+      "provider": "Runway",
+      "website": "https://runwayml.com",
+      "category": "video-gen",
+      "subcategories": ["video-editing", "ai-effects"],
+      "tagline": "AI-powered creative tools for video",
+      "briefDescription": "Runway offers a suite of AI tools for video creation and editing, including text-to-video, video-to-video transformations, and advanced editing features powered by machine learning.",
+      "fullDescription": "Runway is pioneering AI-native video creation tools. Their Gen-2 model enables text-to-video generation, while other tools offer green screen removal, motion tracking, and style transfer. The platform is designed for creative professionals who want to push the boundaries of video content creation using AI.",
+      "keyFeatures": [
+        {
+          "title": "Text to Video",
+          "description": "Generate videos from text prompts"
+        },
+        {
+          "title": "Video to Video",
+          "description": "Transform existing videos with AI"
+        },
+        {
+          "title": "AI Magic Tools",
+          "description": "30+ AI-powered editing tools"
+        },
+        {
+          "title": "Motion Brush",
+          "description": "Animate specific parts of images"
+        }
+      ],
+      "useCases": ["Music videos", "Social media content", "Film production", "Advertising", "Art projects"],
+      "limitations": ["Generation length limits", "Processing time", "Learning curve"],
+      "pricing": {
+        "model": "subscription",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Basic",
+            "cost": 15,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["625 credits/month", "Essential AI tools", "720p exports"],
+            "limits": {
+              "creditsPerMonth": 625,
+              "exportResolution": "720p"
+            }
+          },
+          {
+            "name": "Standard",
+            "cost": 35,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["2250 credits/month", "All AI tools", "4K exports", "Remove watermarks"],
+            "limits": {
+              "creditsPerMonth": 2250,
+              "exportResolution": "4K"
+            }
+          },
+          {
+            "name": "Pro",
+            "cost": 95,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited generations", "All features", "Priority processing"],
+            "limits": {
+              "unlimited": true
+            }
+          }
+        ]
+      },
+      "platforms": ["web"],
+      "userBase": "Millions of creators",
+      "typicalUser": "Video creators, filmmakers, artists",
+      "alternatives": ["pika-labs", "stable-video", "synthesia"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "jasper-ai",
+      "slug": "jasper",
+      "version": 1,
+      "name": "Jasper",
+      "provider": "Jasper AI",
+      "website": "https://www.jasper.ai",
+      "category": "writing-content",
+      "subcategories": ["marketing", "copywriting"],
+      "tagline": "AI copilot for enterprise marketing teams",
+      "briefDescription": "Jasper is an AI writing assistant designed for marketing teams and content creators. It helps generate blog posts, social media content, emails, and more while maintaining brand voice.",
+      "fullDescription": "Jasper has evolved from a writing tool to a comprehensive AI platform for enterprise marketing. It offers brand voice training, campaign creation, and integration with marketing workflows. The platform can generate content across formats while maintaining consistency with brand guidelines and tone.",
+      "keyFeatures": [
+        {
+          "title": "Brand Voice",
+          "description": "Train AI on your brand's unique voice"
+        },
+        {
+          "title": "Campaigns",
+          "description": "Create multi-channel marketing campaigns"
+        },
+        {
+          "title": "Templates",
+          "description": "50+ content templates"
+        },
+        {
+          "title": "Team Collaboration",
+          "description": "Work together on content"
+        }
+      ],
+      "useCases": ["Blog writing", "Social media", "Email marketing", "Ad copy", "SEO content"],
+      "limitations": ["Higher price point", "Learning curve for advanced features"],
+      "pricing": {
+        "model": "subscription",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Creator",
+            "cost": 49,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["1 user", "1 brand voice", "SEO mode", "Browser extension"],
+            "limits": {
+              "users": 1,
+              "brandVoices": 1
+            }
+          },
+          {
+            "name": "Teams",
+            "cost": 125,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["3 users", "3 brand voices", "Campaigns", "Knowledge base"],
+            "limits": {
+              "users": 3,
+              "brandVoices": 3
+            }
+          },
+          {
+            "name": "Business",
+            "cost": 0,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Custom pricing", "Unlimited features", "API access", "SSO"],
+            "limits": {},
+            "customPricing": true
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://developers.jasper.ai",
+        "type": "REST"
+      },
+      "integrations": ["Google Docs", "WordPress", "Webflow", "Zapier"],
+      "platforms": ["web", "api"],
+      "userBase": "100K+ businesses",
+      "typicalUser": "Marketing teams, content agencies",
+      "alternatives": ["copy-ai", "writesonic", "rytr"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "replicate",
+      "slug": "replicate",
+      "version": 1,
+      "name": "Replicate",
+      "provider": "Replicate",
+      "website": "https://replicate.com",
+      "category": "api-marketplace",
+      "subcategories": ["model-hosting", "ml-platform"],
+      "tagline": "Run AI models in the cloud with an API",
+      "briefDescription": "Replicate lets you run machine learning models in the cloud from your own code, without having to set up any servers. Browse thousands of models or deploy your own.",
+      "fullDescription": "Replicate democratizes access to AI models by providing a simple API interface to thousands of open-source models. Developers can run models for image generation, language processing, audio synthesis, and more without managing infrastructure. The platform handles scaling, GPU allocation, and model versioning automatically.",
+      "keyFeatures": [
+        {
+          "title": "Model Library",
+          "description": "Thousands of ready-to-use models"
+        },
+        {
+          "title": "Custom Deployments",
+          "description": "Deploy your own models"
+        },
+        {
+          "title": "Auto-scaling",
+          "description": "Scales from zero to handle traffic"
+        },
+        {
+          "title": "Version Control",
+          "description": "Model versioning and rollbacks"
+        }
+      ],
+      "useCases": ["AI app development", "Model experimentation", "Production deployments", "Research", "Prototyping"],
+      "limitations": ["Cold start times", "Costs can add up with heavy usage"],
+      "pricing": {
+        "model": "usage-based",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Pay-as-you-go",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["CPU: $0.0002/sec", "T4 GPU: $0.00055/sec", "A40 GPU: $0.0023/sec"],
+            "limits": {
+              "basedOnUsage": true
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://replicate.com/docs",
+        "type": "REST"
+      },
+      "sdks": ["Python", "Node.js", "Go", "Swift"],
+      "platforms": ["api"],
+      "userBase": "500K+ developers",
+      "typicalUser": "AI developers, researchers",
+      "alternatives": ["hugging-face", "modal", "banana-dev"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "notion-ai",
+      "slug": "notion-ai",
+      "version": 1,
+      "name": "Notion AI",
+      "provider": "Notion",
+      "website": "https://www.notion.so/product/ai",
+      "category": "writing-content",
+      "subcategories": ["productivity", "knowledge-management"],
+      "tagline": "AI integrated into your workspace",
+      "briefDescription": "Notion AI brings AI capabilities directly into your Notion workspace. Write, brainstorm, edit, and summarize without switching tools. Perfect for teams already using Notion.",
+      "fullDescription": "Notion AI seamlessly integrates artificial intelligence into the popular all-in-one workspace. It can help with writing, summarizing meeting notes, extracting action items, translating content, and answering questions about your workspace data. The AI understands context from your pages and databases, making it particularly powerful for knowledge work.",
+      "keyFeatures": [
+        {
+          "title": "Workspace Context",
+          "description": "AI understands your existing content"
+        },
+        {
+          "title": "Writing Assistant",
+          "description": "Help with drafting and editing"
+        },
+        {
+          "title": "Q&A",
+          "description": "Ask questions about your workspace"
+        },
+        {
+          "title": "Autofill",
+          "description": "Generate content for databases"
+        }
+      ],
+      "useCases": ["Meeting notes", "Documentation", "Content creation", "Project planning", "Knowledge base Q&A"],
+      "limitations": ["Requires Notion subscription", "Limited to Notion ecosystem"],
+      "pricing": {
+        "model": "subscription",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "AI Add-on",
+            "cost": 10,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited AI usage", "All AI features", "Works with any Notion plan"],
+            "limits": {}
+          }
+        ]
+      },
+      "platforms": ["web", "macos", "windows", "ios", "android"],
+      "userBase": "Part of Notion's 30M+ users",
+      "typicalUser": "Knowledge workers, teams",
+      "alternatives": ["coda-ai", "clickup-ai", "monday-ai"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "vercel-ai-sdk",
+      "slug": "vercel-ai-sdk",
+      "version": 1,
+      "name": "Vercel AI SDK",
+      "provider": "Vercel",
+      "website": "https://sdk.vercel.ai",
+      "category": "code-dev",
+      "subcategories": ["sdk", "framework"],
+      "tagline": "The AI Toolkit for TypeScript",
+      "briefDescription": "Vercel AI SDK is an open-source library for building AI-powered applications. It provides React hooks and streaming utilities for popular AI providers like OpenAI, Anthropic, and more.",
+      "fullDescription": "The Vercel AI SDK simplifies building AI applications in TypeScript and React. It handles the complexity of streaming responses, managing conversation state, and switching between AI providers. The SDK supports all major LLM providers and includes utilities for function calling, structured outputs, and edge runtime compatibility.",
+      "keyFeatures": [
+        {
+          "title": "Provider Agnostic",
+          "description": "Works with OpenAI, Anthropic, Google, and more"
+        },
+        {
+          "title": "Streaming First",
+          "description": "Built-in streaming support"
+        },
+        {
+          "title": "React Hooks",
+          "description": "useChat, useCompletion hooks"
+        },
+        {
+          "title": "Edge Ready",
+          "description": "Works in serverless environments"
+        }
+      ],
+      "useCases": ["Chatbots", "AI-powered apps", "Content generation", "Code assistants", "Search interfaces"],
+      "limitations": ["TypeScript/JavaScript only", "Requires backend implementation"],
+      "pricing": {
+        "model": "free",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Open Source",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["Full SDK access", "All providers supported", "Community support"],
+            "limits": {},
+            "isFreeTier": true
+          }
+        ]
+      },
+      "api": {
+        "available": false
+      },
+      "sdks": ["TypeScript", "React"],
+      "integrations": ["Next.js", "Remix", "SvelteKit", "Nuxt"],
+      "platforms": ["web"],
+      "userBase": "100K+ developers",
+      "typicalUser": "Web developers building AI apps",
+      "alternatives": ["langchain", "llamaindex", "semantic-kernel"],
+      "commonPairings": ["vercel", "nextjs", "openai-api"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "make-com",
+      "slug": "make",
+      "version": 1,
+      "name": "Make",
+      "provider": "Make",
+      "website": "https://www.make.com",
+      "category": "automation",
+      "subcategories": ["workflow", "integration"],
+      "tagline": "Design, build, and automate anything",
+      "briefDescription": "Make (formerly Integromat) is a visual automation platform that connects apps and services without code. Build complex workflows with AI integrations, data transformations, and conditional logic.",
+      "fullDescription": "Make provides a powerful visual interface for creating automated workflows between thousands of apps and services. Its strength lies in complex scenario building with routers, filters, and error handling. The platform excels at data transformation and supports advanced features like webhooks, custom API calls, and AI model integration.",
+      "keyFeatures": [
+        {
+          "title": "Visual Workflow Builder",
+          "description": "Drag-and-drop automation design"
+        },
+        {
+          "title": "1000+ Integrations",
+          "description": "Connect to popular services"
+        },
+        {
+          "title": "Data Transformation",
+          "description": "Parse, filter, and transform data"
+        },
+        {
+          "title": "AI Integration",
+          "description": "Use AI models in workflows"
+        }
+      ],
+      "useCases": ["Data synchronization", "Lead processing", "Content publishing", "E-commerce automation", "AI workflow orchestration"],
+      "limitations": ["Learning curve for complex scenarios", "Execution time limits"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["1,000 operations/month", "5 active scenarios", "15-minute execution time"],
+            "limits": {
+              "operationsPerMonth": 1000,
+              "activeScenarios": 5
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Core",
+            "cost": 10.59,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["10,000 operations/month", "Unlimited scenarios", "40-minute execution"],
+            "limits": {
+              "operationsPerMonth": 10000
+            }
+          },
+          {
+            "name": "Pro",
+            "cost": 18.82,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["20,000 operations/month", "Priority execution", "Custom variables"],
+            "limits": {
+              "operationsPerMonth": 20000
+            }
+          }
+        ]
+      },
+      "platforms": ["web", "api"],
+      "userBase": "500K+ users",
+      "typicalUser": "No-code builders, automation specialists",
+      "alternatives": ["zapier", "n8n", "pipedream"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "hugging-face",
+      "slug": "huggingface",
+      "version": 1,
+      "name": "Hugging Face",
+      "provider": "Hugging Face",
+      "website": "https://huggingface.co",
+      "category": "api-marketplace",
+      "subcategories": ["model-hub", "ml-platform"],
+      "tagline": "The AI community building the future",
+      "briefDescription": "Hugging Face is the platform where the machine learning community collaborates on models, datasets, and applications. Host and deploy models, access thousands of pre-trained models, and build ML apps.",
+      "fullDescription": "Hugging Face has become the GitHub of machine learning, hosting over 300,000 models and 50,000 datasets. The platform offers model hosting, Spaces for ML app deployment, and enterprise solutions. Their Transformers library is the de facto standard for working with state-of-the-art NLP models, while their Inference API provides easy access to thousands of models.",
+      "keyFeatures": [
+        {
+          "title": "Model Hub",
+          "description": "300,000+ pre-trained models"
+        },
+        {
+          "title": "Spaces",
+          "description": "Deploy ML apps with Gradio/Streamlit"
+        },
+        {
+          "title": "Datasets",
+          "description": "50,000+ ML datasets"
+        },
+        {
+          "title": "Inference API",
+          "description": "Hosted model inference"
+        },
+        {
+          "title": "AutoTrain",
+          "description": "No-code model training"
+        }
+      ],
+      "useCases": ["Model discovery", "ML app deployment", "Dataset sharing", "Model fine-tuning", "Research collaboration"],
+      "limitations": ["Free tier has rate limits", "Large models require paid inference"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["Community features", "Limited Inference API", "CPU Spaces"],
+            "limits": {
+              "inferenceRateLimit": "Limited"
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Pro",
+            "cost": 9,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Higher rate limits", "GPU Spaces", "Private models", "Early access"],
+            "limits": {}
+          },
+          {
+            "name": "Enterprise",
+            "cost": 20,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["SSO", "Audit logs", "Support", "Regional deployment"],
+            "limits": {},
+            "customPricing": true
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://huggingface.co/docs/api-inference",
+        "type": "REST"
+      },
+      "sdks": ["Python", "JavaScript", "Rust"],
+      "platforms": ["web", "api"],
+      "userBase": "1M+ developers",
+      "typicalUser": "ML engineers, researchers, data scientists",
+      "alternatives": ["replicate", "modal", "kaggle"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "leonardo-ai",
+      "slug": "leonardo-ai",
+      "version": 1,
+      "name": "Leonardo.AI",
+      "provider": "Leonardo.AI",
+      "website": "https://leonardo.ai",
+      "category": "image-gen",
+      "subcategories": ["game-assets", "design"],
+      "tagline": "AI image generation for creators",
+      "briefDescription": "Leonardo.AI specializes in creating game assets, concept art, and design elements. It offers fine-tuned models for specific styles and use cases, with features tailored for creative professionals.",
+      "fullDescription": "Leonardo.AI has carved out a niche in AI image generation by focusing on the needs of game developers, concept artists, and designers. The platform offers specialized models trained on specific art styles, advanced control features like ControlNet, and tools for creating consistent character designs and game assets. Its Canvas feature allows for AI-powered image editing and expansion.",
+      "keyFeatures": [
+        {
+          "title": "Custom Models",
+          "description": "Train models on your art style"
+        },
+        {
+          "title": "Canvas Editor",
+          "description": "AI-powered image editing"
+        },
+        {
+          "title": "Consistent Characters",
+          "description": "Generate consistent character designs"
+        },
+        {
+          "title": "Texture Generation",
+          "description": "Create seamless textures"
+        }
+      ],
+      "useCases": ["Game asset creation", "Concept art", "Character design", "Marketing visuals", "Product mockups"],
+      "limitations": ["Credit system can be limiting", "Some features in beta"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["150 tokens daily", "Basic models", "Community features"],
+            "limits": {
+              "dailyTokens": 150
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Apprentice",
+            "cost": 12,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["8,500 tokens/month", "Premium models", "Private generations"],
+            "limits": {
+              "monthlyTokens": 8500
+            }
+          },
+          {
+            "name": "Artisan",
+            "cost": 30,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["25,000 tokens/month", "All features", "Priority processing"],
+            "limits": {
+              "monthlyTokens": 25000
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://docs.leonardo.ai",
+        "type": "REST"
+      },
+      "platforms": ["web", "api"],
+      "userBase": "4M+ users",
+      "typicalUser": "Game developers, digital artists",
+      "alternatives": ["midjourney", "stable-diffusion", "dall-e"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "codeium",
+      "slug": "codeium",
+      "version": 1,
+      "name": "Codeium",
+      "provider": "Codeium",
+      "website": "https://codeium.com",
+      "category": "code-dev",
+      "subcategories": ["code-completion", "ide-integration"],
+      "tagline": "Free AI code completion and chat",
+      "briefDescription": "Codeium offers free AI-powered code completion and chat for individuals. It supports 70+ languages and integrates with all major IDEs, providing an accessible alternative to GitHub Copilot.",
+      "fullDescription": "Codeium democratizes AI coding assistance by offering a generous free tier for individual developers. It provides intelligent code completions, function generation, and an AI chat interface for coding questions. The tool supports a wide range of programming languages and integrates seamlessly with popular development environments. Enterprise features include self-hosting options and enhanced security.",
+      "keyFeatures": [
+        {
+          "title": "Free for Individuals",
+          "description": "Unlimited usage for personal projects"
+        },
+        {
+          "title": "70+ Languages",
+          "description": "Broad language support"
+        },
+        {
+          "title": "IDE Integration",
+          "description": "Works with VS Code, JetBrains, Vim, etc."
+        },
+        {
+          "title": "AI Chat",
+          "description": "Ask questions about your code"
+        }
+      ],
+      "useCases": ["Code completion", "Bug fixing", "Code explanation", "Test generation", "Documentation"],
+      "limitations": ["Less advanced than paid alternatives", "Limited context in free tier"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Individual",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["Unlimited code completions", "AI chat", "All languages", "All IDEs"],
+            "limits": {},
+            "isFreeTier": true
+          },
+          {
+            "name": "Teams",
+            "cost": 12,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Everything in Individual", "Admin dashboard", "Advanced personalization", "Priority support"],
+            "limits": {}
+          },
+          {
+            "name": "Enterprise",
+            "cost": 0,
+            "currency": "USD",
+            "billingCycle": null,
+            "features": ["Self-hosting option", "SSO", "Fine-tuning", "SLA"],
+            "customPricing": true
+          }
+        ]
+      },
+      "platforms": ["macos", "windows", "linux"],
+      "userBase": "500K+ developers",
+      "typicalUser": "Individual developers, small teams",
+      "alternatives": ["github-copilot", "cursor-ai", "tabnine"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "writesonic",
+      "slug": "writesonic",
+      "version": 1,
+      "name": "Writesonic",
+      "provider": "Writesonic",
+      "website": "https://writesonic.com",
+      "category": "writing-content",
+      "subcategories": ["seo", "marketing"],
+      "tagline": "AI writer for SEO-optimized content",
+      "briefDescription": "Writesonic combines AI writing with SEO optimization tools. It includes features for article writing, keyword research, and content optimization, making it popular among content marketers.",
+      "fullDescription": "Writesonic positions itself as a comprehensive content creation platform with a strong focus on SEO. Beyond basic AI writing, it offers tools for keyword research, competitor analysis, and SERP analysis. The platform includes Chatsonic (an AI chatbot with real-time data), Botsonic (custom chatbot builder), and various specialized writing tools for different content types.",
+      "keyFeatures": [
+        {
+          "title": "SEO Optimization",
+          "description": "Built-in SEO tools and analysis"
+        },
+        {
+          "title": "Real-time Data",
+          "description": "Access current information"
+        },
+        {
+          "title": "Bulk Generation",
+          "description": "Create multiple articles at once"
+        },
+        {
+          "title": "WordPress Integration",
+          "description": "Direct publishing to WordPress"
+        }
+      ],
+      "useCases": ["Blog writing", "SEO content", "Product descriptions", "Social media", "Email campaigns"],
+      "limitations": ["Word limits on lower tiers", "Quality varies with prompts"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Free",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["10,000 words/month", "Access to all tools", "25+ languages"],
+            "limits": {
+              "wordsPerMonth": 10000
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Individual",
+            "cost": 20,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Unlimited words", "GPT-4 access", "API access", "Priority support"],
+            "limits": {
+              "unlimited": true
+            }
+          },
+          {
+            "name": "Team",
+            "cost": 30,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["Everything in Individual", "Collaboration features", "Custom models"],
+            "limits": {}
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://docs.writesonic.com",
+        "type": "REST"
+      },
+      "integrations": ["WordPress", "Zapier", "Google Docs"],
+      "platforms": ["web", "api"],
+      "userBase": "5M+ users",
+      "typicalUser": "Content marketers, SEO professionals",
+      "alternatives": ["jasper-ai", "copy-ai", "surfer-seo"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "pinecone",
+      "slug": "pinecone",
+      "version": 1,
+      "name": "Pinecone",
+      "provider": "Pinecone",
+      "website": "https://www.pinecone.io",
+      "category": "data-hosting",
+      "subcategories": ["vector-database", "ai-infrastructure"],
+      "tagline": "The vector database for AI applications",
+      "briefDescription": "Pinecone is a fully managed vector database that makes it easy to build high-performance AI applications. It's designed for storing and querying vector embeddings at scale.",
+      "fullDescription": "Pinecone provides the infrastructure for semantic search, recommendation systems, and other AI applications that rely on vector similarity. It handles the complexity of indexing and querying high-dimensional vectors, offering features like metadata filtering, namespace isolation, and hybrid search. The serverless architecture means no infrastructure management is required.",
+      "keyFeatures": [
+        {
+          "title": "Fully Managed",
+          "description": "No infrastructure to manage"
+        },
+        {
+          "title": "Real-time Updates",
+          "description": "Instant index updates"
+        },
+        {
+          "title": "Metadata Filtering",
+          "description": "Filter results by attributes"
+        },
+        {
+          "title": "Hybrid Search",
+          "description": "Combine vector and keyword search"
+        }
+      ],
+      "useCases": ["Semantic search", "Recommendation engines", "RAG applications", "Anomaly detection", "Similarity matching"],
+      "limitations": ["Costs can scale with usage", "Vendor lock-in considerations"],
+      "pricing": {
+        "model": "freemium",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Starter",
+            "cost": 0,
+            "billingCycle": null,
+            "features": ["100K vectors", "1 index", "Community support"],
+            "limits": {
+              "vectors": 100000,
+              "indexes": 1
+            },
+            "isFreeTier": true
+          },
+          {
+            "name": "Standard",
+            "cost": 70,
+            "currency": "USD",
+            "billingCycle": "monthly",
+            "features": ["2M vectors included", "5 indexes", "Standard support"],
+            "limits": {
+              "vectorsIncluded": 2000000,
+              "indexes": 5
+            }
+          },
+          {
+            "name": "Enterprise",
+            "cost": 0,
+            "currency": "USD",
+            "billingCycle": null,
+            "features": ["Custom limits", "Private deployment", "SLA", "Premium support"],
+            "customPricing": true
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://docs.pinecone.io",
+        "type": "REST"
+      },
+      "sdks": ["Python", "Node.js", "Go", "Java"],
+      "integrations": ["LangChain", "LlamaIndex", "OpenAI"],
+      "platforms": ["api"],
+      "userBase": "10K+ companies",
+      "typicalUser": "AI developers, ML engineers",
+      "alternatives": ["weaviate", "qdrant", "chroma"],
+      "commonPairings": ["openai-api", "langchain"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    },
+    {
+      "serviceId": "stable-diffusion-api",
+      "slug": "stable-diffusion-api",
+      "version": 1,
+      "name": "Stable Diffusion API",
+      "provider": "Stability AI",
+      "website": "https://platform.stability.ai",
+      "category": "image-gen",
+      "subcategories": ["api", "open-source"],
+      "tagline": "Open-source image generation model API",
+      "briefDescription": "Stability AI's official API for Stable Diffusion models. Generate images, edit existing ones, and upscale with the latest open-source image generation technology.",
+      "fullDescription": "Stability AI provides official API access to their Stable Diffusion models, including SDXL and the latest versions. The API offers image generation, image-to-image transformation, inpainting, and upscaling. As the creators of Stable Diffusion, they provide optimized inference and early access to new model releases. The platform supports various control methods and style customization.",
+      "keyFeatures": [
+        {
+          "title": "Latest Models",
+          "description": "Access to SDXL and newest versions"
+        },
+        {
+          "title": "Image Editing",
+          "description": "Inpainting and outpainting"
+        },
+        {
+          "title": "Control Methods",
+          "description": "ControlNet and style transfer"
+        },
+        {
+          "title": "Fast Generation",
+          "description": "Optimized inference speeds"
+        }
+      ],
+      "useCases": ["Product imagery", "Marketing content", "Game assets", "Concept art", "Photo editing"],
+      "limitations": ["No free tier", "Rate limits apply"],
+      "pricing": {
+        "model": "usage-based",
+        "currency": "USD",
+        "tiers": [
+          {
+            "name": "Pay-per-use",
+            "cost": 0.002,
+            "currency": "USD",
+            "billingCycle": null,
+            "features": ["$0.002 per image", "SDXL models", "All features", "REST API"],
+            "limits": {
+              "pricePerImage": 0.002
+            }
+          }
+        ]
+      },
+      "api": {
+        "available": true,
+        "documentation": "https://platform.stability.ai/docs",
+        "type": "REST"
+      },
+      "sdks": ["Python", "Node.js", "PHP"],
+      "platforms": ["api"],
+      "userBase": "100K+ developers",
+      "typicalUser": "Developers, creative agencies",
+      "alternatives": ["midjourney", "dall-e-api", "leonardo-ai"],
+      "metadata": {
+        "dateAdded": "2025-01-06T00:00:00Z",
+        "lastVerified": "2025-01-06T00:00:00Z",
+        "lastUpdated": "2025-01-06T00:00:00Z",
+        "verificationStatus": "verified",
+        "dataSource": "official"
+      }
+    }
+  ]
+}
